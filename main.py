@@ -27,7 +27,7 @@ print(f"{driver.title} loaded")
 # Getting the source code of the page.
 page_source  = driver.page_source
 
-sleep(3)
+sleep(2)
 
 # ------------------------------- Accepting cookies  -------------------------------
 
@@ -80,11 +80,20 @@ main_search_box.send_keys("Python")
 # Sending enter (return) to an element.
 main_search_box.send_keys(Keys.RETURN)
 
-# Sending click
 sleep(2)
+
+# Sending click
+
 getting_started_button = driver.find_element(By.LINK_TEXT, "Python Get Started")
 getting_started_button.click()
 
+sleep(2)
 
+# ------------------------------- Navigation Back and forward  --------------------------------
+driver.back()
+
+sleep(2)
+
+driver.forward()
 
 sleep(500)
